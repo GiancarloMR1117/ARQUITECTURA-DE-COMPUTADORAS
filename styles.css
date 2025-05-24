@@ -1,0 +1,817 @@
+
+@font-face {
+    @font-face { font-family: Quantum; src: url('Quantum.TTF'); } 
+}
+
+/* Background image */
+body{
+    font-family: QUANTUM;
+    background-image: url("image/thegrid_1.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+min-height: 100vh;
+    text-align: center;
+}
+
+/* logo image */
+.logo-image {
+    display: block;
+    margin: 5px 480px ; /* top margin, auto left/right */
+}
+
+/* Page Title */
+h1 {
+    color: #0099ff;
+    font-family: TRON; src: url('TRON.TTF');
+}
+
+/* Links  de las subPaginas*/
+nav {
+            font-size: 29px;
+            font-family: Quantum; src: url('Quantum.TTF');
+            background-color: #00000000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0aaddf;
+            
+            color: rgb(223, 223, 223);
+        }
+
+        /* Estilo para el enlace activo */
+        nav ul li a.active {
+            background-color: #6347e0;
+        }
+
+/* Info Portada */
+h2 {
+    color: hwb(0 100% 0% / 0.993);
+    background-color: rgba(12, 12, 12, 0);
+
+    font-family: Quantum; src: url('Quantum.TTF');
+}
+
+/* Temario / Practicas:    */
+/* Botones: Unidades-Practicas*/
+.button2 {
+  display: inline-block;
+  background-color: #ca0e3d;
+  color: rgb(247, 247, 247);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Cotizacion:    */
+/* Botones: Cotizacion*/
+/* -Gama Baja*/
+.button1C {
+  display: inline-block;
+  background-color: #000000a1;
+  color: rgb(255, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* -Gama Media*/
+.button2C {
+  display: inline-block;
+  background-color: #00000083;
+  color: rgb(255, 102, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* -Gama Alta*/
+.button3C {
+  display: inline-block;
+  background-color: #000000a6;
+  color: rgb(0, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Temario:                                */
+/*Unidad 1:                       */
+/*titulos: U1                   */
+.tituloU1{  
+    color: #0de9e9; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    font-size: 35px;
+}
+
+/*Subtitulos: U1*/
+.subtituloU1{
+    color: #0de9e9; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    
+}
+
+/*Subtitulos2: U1*/
+.subtitulo1{
+    color: #198b8b; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 rgb(253, 253, 253),
+         1px -1px 0 rgb(255, 255, 255),
+        -1px  1px 0 rgb(255, 255, 255),
+         1px  1px 0 black;
+    
+}
+
+/*Texto de los temasU1*/
+.texto
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 16px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*cuadro de color U1*/
+.cuadro-infoU1
+{
+    background-color: rgba(81, 208, 212, 0.233); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 850px; 
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+
+/*margen de color de tabla U1*/
+.tabla
+{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    margin-right: 20px;
+    font-family: Century Gothic, sans-serif;
+}
+
+/*titulos de las columnas*/
+.tabla th {
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/*texto de las columnas*/
+.tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    color: #ffffff;
+}
+
+/*tabla tr:hover iluuminacion*/
+.tabla tr:hover {
+    background-color: rgba(19, 247, 255, 0.233);
+}
+
+/*texto de la lista*/
+.lista
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*ttexto de la lista*/
+.lista strong
+{
+    color:rgb(255, 255, 255); 
+    background-color: #00000060;
+}
+
+.subtituloU1-1{
+    color: #1dcece; 
+    font-weight: small; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 20px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+   
+    
+}
+
+
+/*Unidad 2:                       */
+/*titulos: U2                   */
+.tituloU2{  
+    color: #0de9e9; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    font-size: 35px;
+}
+
+/*Subtitulos: U2*/
+.subtituloU2{
+    color: #0de9e9; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    
+}
+
+/*Subtitulos2: U2*/
+.subtitulo1{
+    color: #198b8b; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 rgb(253, 253, 253),
+         1px -1px 0 rgb(255, 255, 255),
+        -1px  1px 0 rgb(255, 255, 255),
+         1px  1px 0 black;
+    
+}
+
+/*Texto de los temasU2*/
+.texto
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 16px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*cuadro de color U2*/
+.cuadro-infoU2
+{
+    background-color: rgba(81, 208, 212, 0.233); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 850px; 
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+
+/*margen de color de tabla U2*/
+.tabla
+{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    margin-right: 20px;
+    font-family: Century Gothic, sans-serif;
+}
+
+/*titulos de las columnas*/
+.tabla th {
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/*texto de las columnas*/
+.tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    color: #ffffff;
+}
+
+/*tabla tr:hover iluuminacion*/
+.tabla tr:hover {
+    background-color: rgba(19, 247, 255, 0.233);
+}
+
+/*texto de la lista*/
+.lista
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*ttexto de la lista*/
+.lista strong
+{
+    color:rgb(255, 255, 255); 
+    background-color: #00000060;
+}
+
+.subtituloU2-1{
+    color: #1dcece; 
+    font-weight: small; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 20px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+}
+
+
+
+
+/*Unidad 3:                       */
+/*titulos: U3                   */
+.tituloU3{  
+    color: #0de9e9; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    font-size: 35px;
+}
+
+/*Subtitulos: U3*/
+.subtituloU3{
+    color: #0de9e9; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    
+}
+
+/*Subtitulos2: U3*/
+.subtitulo1{
+    color: #198b8b; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 rgb(253, 253, 253),
+         1px -1px 0 rgb(255, 255, 255),
+        -1px  1px 0 rgb(255, 255, 255),
+         1px  1px 0 black;
+    
+}
+
+/*Texto de los temasU3*/
+.texto
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 16px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*cuadro de color U3*/
+.cuadro-infoU3
+{
+    background-color: rgba(81, 208, 212, 0.233); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 850px; 
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+
+/*margen de color de tabla U3*/
+.tabla
+{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    margin-right: 20px;
+    font-family: Century Gothic, sans-serif;
+}
+
+/*titulos de las columnas*/
+.tabla th {
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/*texto de las columnas*/
+.tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    color: #ffffff;
+}
+
+/*tabla tr:hover iluuminacion*/
+.tabla tr:hover {
+    background-color: rgba(19, 247, 255, 0.233);
+}
+
+/*texto de la lista*/
+.lista
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*ttexto de la lista*/
+.lista strong
+{
+    color:rgb(255, 255, 255); 
+    background-color: #00000060;
+}
+
+.subtituloU3-1{
+    color: #1dcece; 
+    font-weight: small; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 20px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+}
+
+
+
+/*Unidad 4:                       */
+/*titulos: U4                   */
+.tituloU4{  
+    color: #013a3a; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 40px;
+    text-shadow: 0 0 5px #0de9e9, 
+                 0 0 10px #0de9e9, 
+                 0 0 20px #0de9e9, 
+                 0 0 40px #00ffff, 
+                 0 0 80px #00ffff;
+    animation: tronGlow 2s infinite alternate;
+}
+
+/*Subtitulos: U4*/
+.subtituloU4{
+    color: #0de9e9; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 29px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    
+}
+
+/*Subtitulos2: U4*/
+.subtitulo1-U4{
+    color: #198b8b; 
+    font-weight: bold;
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 25px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+    text-shadow:
+        -1px -1px 0 rgb(253, 253, 253),
+         1px -1px 0 rgb(255, 255, 255),
+        -1px  1px 0 rgb(255, 255, 255),
+         1px  1px 0 black;
+    
+}
+
+/*Texto de los temasU4*/
+.textoU4
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 16px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+/*cuadro de color U4*/
+.cuadro-infoU4
+{
+    background-color: rgba(81, 208, 212, 0.233); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 850px; 
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+
+/*margen de color de tabla U4*/
+.tablaU4
+{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    margin-right: 20px;
+    font-family: Century Gothic, sans-serif;
+}
+
+/*titulos de las columnas*/
+.tablaU4 th {
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/*texto de las columnas*/
+.tablaU4 td {
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    color: #ffffff;
+}
+
+/*tabla tr:hover iluuminacion*/
+.tablaU4 tr:hover {
+    background-color: rgba(19, 247, 255, 0.233);
+}
+
+/*texto de la lista*/
+.listaU4
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 680px; 
+    margin: 0 auto;
+}
+
+/*ttexto de la lista*/
+.listaU4 strong
+{
+    color:rgb(255, 255, 255); 
+    background-color: #00000060;
+}
+.listaU4-1
+{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 380px; 
+    margin: 0 auto;
+}
+
+/*ttexto de la lista*/
+.listaU4-1 strong
+{
+    color:rgb(255, 255, 255); 
+    background-color: #00000060;
+}
+
+.subtituloU4-1{
+    color: #1dcece; 
+    font-weight: small; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 20px; 
+    text-align: center; 
+    width: 800px; 
+    margin: 0 auto;
+}
+
+
+
+/*Practicas                                     :    */
+/*Practica 3:    */
+/*Botones  */
+/*boton: intel*/
+.intelbutton{
+  display: inline-block;
+  background-color: #1a5dec;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/*boton: amd*/
+.amdbutton {
+  display: inline-block;
+  background-color: #eb3609;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Titulos*/
+h3 {
+    font-family: QUANTUM;
+    color: #0099ff;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/* /??????????????*/
+/* Texto*/
+ footer{
+     font-family: TR;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    font-size: 20px;
+}
+
+/* /??????????????*/
+/* Texto*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #222;
+    margin: 0% auto;
+    color: #ffffff;
+}
+
+th, td {
+    border: 5px solid #76f0f0;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #000000ce;
+    color: rgb(0, 174, 255);
+}
+tr:hover {
+    background-color: #235374;
+    color: black;
+}
+
+.precio-link {
+    color: #2501f5;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.precio-link:hover {
+
+    background-color: #000000;
+}
+
+.componente-img {
+    width: 200px;
+    height: 200px;
+    
+
+}
+
+.rect-table {
+    border-collapse: collapse;
+    width: 100%;           /* or 100% for full width */
+    margin: 30px auto;    /* center the table */
+    background: #181818;  /* background color */
+    border: 10px solid #ff0000; /* outer border */
+    border-radius: 12px;  /* rounded corners */
+    overflow: hidden;     /* ensures border-radius works */
+    box-shadow: 0 7px 200px rgb(255, 0, 0); /* optional shadow */
+}
+
+/* texto */
+.rect-table th, .rect-table td {
+    border: 1px solid #444;
+    padding: 16px 10px;
+    color: #fff;
+    text-align: center;
+    font-family: tr, Arial, sans-serif;
+    background: #222; /* cell background */
+}
+
+/* titulos */
+.rect-table th {
+    background: #ff5e00;
+    color: #ffffff;
+    font-size: 1.1em;
+
+}
+.rect-table tr:hover {
+    background-color: #bb6330;
+    color: black;
+}
+
+.rect-table td:hover {
+    background-color: #bb6330;
+    color: black;
+}
+
+.no-border td {
+    border: none !important;
+    background: transparent !important; /* Optional: remove cell background */
+}
+
+.blue-bg {
+    background: #ff00c8; /* deep blue */
+    color: #ff0000;
+    padding: 32px 24px;
+    border-radius: 16px;
+    margin: 32px auto;
+    max-width: 900px;
+    font-family: tr;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}

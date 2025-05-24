@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura De Computadoras </title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <header>
+        <h1>ARQUITECTURA DE COMPUTADORAS </h1> 
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Pagina De Inicio" >Inicio</a></li>
+                <li><a href="temario.html" title="Unidaes Con Los Temas">Temario</a></li>
+                <li><a href="practicas.html" title="Practicas De La Materia">Practicas</a></li>
+                <li><a href="cotizacion.html" title="Costos De Equipos">Cotizacion</a></li>
+            </ul>
+        </nav>
+    </header>
+<p style="color: aqua;text-align: center; font-size: 40px;">3.1 Chipset: </p>
+
+
+
+<div class="blue-bg" style="max-width: 900px; margin: 40px auto; padding: 32px 24px; border-radius: 16px; background:rgb(28, 77, 78); color: #fff; box-shadow: 0 4px 32px rgba(0,0,0,0.2); text-align: center;">
+    <h1 style="color: #00eeff;font-family: tr ; margin-bottom: 24px;">UNIDAD CENTRAL DE PROCESAMIENTO (CPU)</h1>
+        <img src="image/1.jpeg" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+   
+    <p style="font-size: 1.2em;">
+        La Unidad Central de Procesamiento, comúnmente conocida como CPU, es el componente principal de una computadora encargado de interpretar y ejecutar las instrucciones de los programas. Actúa como el "cerebro" del sistema, procesando datos y realizando cálculos necesarios para el funcionamiento de las aplicaciones y del propio sistema operativo.
+    </p>
+    <p style="font-size: 1.1em;">
+        Una CPU típica consta de los siguientes componentes:
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Unidad Aritmético-Lógica (ALU):</strong> Realiza operaciones matemáticas y lógicas.</li>
+        <li><strong>Unidad de Control:</strong> Dirige y coordina las operaciones de la computadora, interpretando las instrucciones y gestionando su ejecución.</li>
+        <li><strong>Registros:</strong> Pequeñas áreas de almacenamiento que contienen datos temporales y direcciones utilizadas durante el procesamiento.</li>
+    </ul>
+    <h3 style="color: #00eeff;font-family: tr ; margin-top: 32px;">CPU</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Contador de programa</strong>
+            <ul>
+                <li>Registros</li>
+                <li>Unidad de control</li>
+            </ul>
+        </li>
+        <li><strong>Memoria Principal</strong></li>
+        <li><strong>Sistemas de Entrada/Salida</strong></li>
+    </ul>
+
+    <h1 style="color:#00eeff;font-family: tr ; margin-top: 40px;">CONTROL DEL BUS</h1>
+    <p style="font-size: 1.2em;">
+        En la arquitectura de las computadoras, el bus de control es una parte esencial del sistema de buses que permite la comunicación entre la CPU y otros dispositivos dentro del equipo. Mientras que el bus de direcciones transporta información sobre la ubicación de los datos y el bus de datos transfiere los propios datos, el bus de control transmite señales de comando desde la CPU y recibe señales de estado de los dispositivos.
+    </p>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 32px;">FUNCIONES DEL CONTROL DEL BUS</h2>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Sincronización de operaciones:</strong>
+            <ul>
+                <li>Coordina la ejecución de instrucciones en la CPU y la comunicación con la memoria y dispositivos de entrada/salida.</li>
+                <li>Envía señales de reloj para asegurar que todos los componentes trabajen en sincronía.</li>
+            </ul>
+        </li>
+        <li><strong>Gestión de permisos y acceso a la memoria:</strong>
+            <ul>
+                <li>Controla el acceso a la memoria RAM, evitando conflictos entre múltiples dispositivos que intentan leer o escribir datos simultáneamente.</li>
+            </ul>
+        </li>
+        <li><strong>Indicación del tipo de operación:</strong>
+            <ul>
+                <li>Transporta señales que indican si la operación es de lectura o escritura.</li>
+                <li>Especifica si la operación involucra memoria, entrada/salida o registros internos de la CPU.</li>
+            </ul>
+        </li>
+        <li><strong>Gestión de interrupciones:</strong>
+            <ul>
+                <li>Recibe y maneja interrupciones generadas por dispositivos externos, pausando temporalmente la ejecución de la CPU para atenderlas.</li>
+            </ul>
+        </li>
+        <li><strong>Activación y desactivación de dispositivos:</strong>
+            <ul>
+                <li>Envía señales de habilitación o deshabilitación a dispositivos periféricos según sea necesario.</li>
+            </ul>
+        </li>
+        <li><strong>Control de errores:</strong>
+            <ul>
+                <li>Detecta errores en la transferencia de datos y puede solicitar reintentos en caso de fallos en la comunicación.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 40px;">3.1.3 - Puentes de entrada/salida</h2>
+    <h3 style="color: #00eeff;font-size: 30px;font-family: tr ;">PUENTE SUR</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Controla el flujo de datos con la BIOS, los dispositivos de entrada/salida (E/S), las unidades IDE, las tarjetas de expansión PCI y los dispositivos externos USB.</li>
+        <li>También se le conoce como Concentrador de Controladores de Entrada/Salida (I/O Controller Hub, ICH).</li>
+        <li>Coordina los diferentes dispositivos de entrada y salida y algunas otras funcionalidades de baja velocidad.</li>
+    </ul>
+    <h3 style="color: #00eeff;font-size: 30px;font-family: tr ;">PUENTE NORTE</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Controla el flujo de datos entre la CPU, la memoria RAM y la tarjeta gráfica.</li>
+        <li>Determina el tipo de procesador y memoria RAM que admite la placa base.</li>
+        <li>Conecta la CPU al puente norte mediante el bus frontal (FSB).</li>
+        <li>Conecta el puente norte con el chip del puente sur mediante el bus PCI.</li>
+    </ul>
+    <p style="font-size: 1.1em;">
+        Los puentes de entrada y salida de un chipset son el puente norte y el puente sur, que controlan el flujo de datos entre los componentes de la tarjeta madre.
+    </p>
+
+    <h2 style="color: #00eeff;font-family: tr ; margin-top: 40px;">3.1.4 - Controlador De Interrupciones</h2>
+    <p style="font-size: 1.1em;">
+        Un controlador de interrupciones es <strong>un componente que reúne eventos de interrupción de hardware de varias fuentes y los presenta al procesador</strong>, lo que permite un manejo eficiente de eventos en tiempo real sin la necesidad de un sondeo constante por parte del procesador.
+    </p>
+    <h4 style="color: #00eeff;font-family: tr ;">¿Cómo funciona?</h4>
+    <ol style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>El controlador de interrupciones reúne las solicitudes de interrupción de los dispositivos.</li>
+        <li>Establece prioridades entre las solicitudes de interrupción.</li>
+        <li>Selecciona la solicitud de interrupción que informará al procesador principal.</li>
+        <li>Recibe una notificación con el número de interrupción.</li>
+        <li>Ejecuta la rutina de servicio de interrupciones (ISR) correspondiente.</li>
+    </ol>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 40px;">ACCESO DIRECTO A MEMORIA (DMA)</h2>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>El acceso directo a memoria (DMA) permite a ciertos componentes acceder a la memoria del sistema para leer o escribir independientemente de la CPU.</li>
+        <li>DMA es esencial en ordenadores modernos, permitiendo a dispositivos de diferentes velocidades comunicarse sin sobrecargar la CPU.</li>
+        <li>Una transferencia DMA consiste en copiar un bloque de memoria de un dispositivo a otro, realizada por el controlador DMA.</li>
+        <li>Problemas de coherencia en la memoria caché: la DMA puede llevar a problemas si la caché no se vacía antes de que otro dispositivo acceda a la memoria.</li>
+        <li>Durante las operaciones DMA, el rendimiento del sistema puede verse afectado porque el DMA usa intensivamente el bus, impidiendo que la CPU lea datos de memoria.</li>
+        <li>La memoria caché dentro de la CPU permite que ésta siga trabajando mientras el DMA mantiene ocupado el bus.</li>
+    </ul>
+
+    <h2 style="color: #00eeff;font-family: tr ; margin-top: 40px;">CIRCUITOS DE TEMPORIZACIÓN</h2>
+            <img src="image/2-2.jpeg" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Disponen de dos salidas, una es la inversa de la otra. El temporizador tiene un estado estable y uno inestable, cambiando de estado con un pulso de entrada.</li>
+        <li>El tiempo de permanencia en el estado inestable lo determina una constante de tiempo RC externa.</li>
+        <li>La finalidad de la temporización es retardar el paso de una señal entre nodos del circuito.</li>
+        <li>Existen temporizadores "redisparables" y "no redisparables", con entradas de activación y desactivación.</li>
+    </ul>
+    <h4 style="color:#00eeff;font-family: tr ;">ESTADOS DE ESPERA</h4>
+    <p style="font-size: 1.1em;">
+        Cuando se conectan tarjetas al bus de la PC, un problema común es igualar la velocidad de los ciclos del bus con la de las tarjetas. La señal READY del bus puede extender la longitud del ciclo para igualar una tarjeta lenta o parar el bus hasta que se sincronice.
+    </p>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 40px;">3.1.7: CIRCUITOS DE CONTROL</h2>
+    <p style="font-size: 1.1em;">
+        Coordinan y gestionan las señales que controlan las operaciones de la CPU y otros componentes del sistema.
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Propósito:</strong> Aseguran que las diferentes partes del sistema trabajen en conjunto de manera sincronizada.</li>
+        <li><strong>Tipos de control:</strong>
+            <ul>
+                <li><strong>Secuencial:</strong> Las señales de control se activan en un orden específico, paso a paso.</li>
+                <li><strong>Combinacional:</strong> Las señales de control se generan a través de combinaciones lógicas, dependiendo del estado de las instrucciones.</li>
+            </ul>
+        </li>
+        <li><strong>Componentes principales:</strong>
+            <ul>
+                <li>Registro de control</li>
+                <li>Decodificador de instrucciones</li>
+                <li>Generador de señales de control</li>
+                <li>Contador de programa</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 style="color: #00eeff;font-family: tr ; margin-top: 40px;">3.1.8: CONTROLADORES DE VIDEO</h2>
+    <p style="font-size: 1.1em;">
+        Gestionan la salida visual de la computadora, tomando los datos gráficos y convirtiéndolos en señales que pueden ser interpretadas por el monitor.
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Propósito:</strong> Permiten que la computadora muestre imágenes, texto y gráficos en la pantalla.</li>
+        <li><strong>Generación de imágenes:</strong> Convierte datos en señales que el monitor puede mostrar.</li>
+        <li><strong>Manejo de resolución:</strong> Ajusta la cantidad de píxeles y la resolución de la pantalla.</li>
+        <li><strong>Sincronización de señales:</strong> Envía señales al monitor para asegurarse de que los píxeles se dibujen correctamente.</li>
+        <li><strong>Tipos:</strong>
+            <ul>
+                <li>VGA: Un estándar antiguo con resoluciones básicas.</li>
+                <li>Tarjetas gráficas modernas: Soporte para gráficos en 3D, resoluciones altas y procesamiento paralelo.</li>
+            </ul>
+        </li>
+        <li><strong>Funciones adicionales:</strong>
+            <ul>
+                <li>Buffering de imágenes: Almacena imágenes antes de enviarlas al monitor para evitar parpadeos.</li>
+                <li>Aceleración de hardware: Las GPU modernas aceleran el procesamiento gráfico, mejorando el rendimiento en videojuegos y aplicaciones de diseño.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 style="color:#00eeff;font-family: tr ;font-size: 50px;margin-top: 40px;">3.2. APLICACIONES</h2>
+    <p style="font-size: 1.1em;">
+        En el contexto de la arquitectura de computadoras, las aplicaciones se refieren al conjunto de programas y procesos que hacen uso de los recursos de hardware y software de una computadora para realizar tareas específicas. Las aplicaciones pueden ser muy diversas y van desde sistemas operativos hasta programas de procesamiento de textos, navegadores web, videojuegos y software de diseño.
+    </p>
+    <p style="font-size: 1.1em;">
+        Cada aplicación interactúa con la computadora para cumplir su propósito, utilizando recursos como la CPU, memoria, almacenamiento, y dispositivos de entrada y salida.
+    </p>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 40px;">3.2.1 ENTRADA / SALIDA (E/S)</h2>
+    <p style="font-size: 1.1em;">
+        Entrada/Salida (E/S) hace referencia al conjunto de dispositivos y técnicas que permiten a una computadora interactuar con el mundo exterior, ya sea recibiendo datos (entrada) o enviándolos (salida). Este proceso es crucial para que las aplicaciones puedan recibir información del usuario o de otros sistemas y devolver resultados de manera comprensible.
+    </p>
+    <h3 style="color:#00eeff;font-size: 30px;font-family: tr ;">DISPOSITIVOS DE ENTRADA</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Teclado</li>
+        <li>Ratón</li>
+        <li>Micrófonos</li>
+        <li>Cámaras</li>
+        <li>Escáneres</li>
+    </ul>
+    <h3 style="color: #00eeff;font-size: 30px;font-family: tr ;">DISPOSITIVOS DE SALIDA</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Monitor</li>
+        <li>Pantalla de TV</li>
+        <li>Altavoces</li>
+        <li>Auriculares</li>
+        <li>Proyector</li>
+        <li>Impresoras</li>
+    </ul>
+
+    <h3 style="color: #00eeff;font-size: 30px;font-family: tr ;">MECANISMOS DE E/S</h3>
+    <p style="font-size: 1.1em;">
+        Los dispositivos de E/S están gestionados por el sistema operativo, que controla el flujo de datos entre la CPU, los dispositivos y la memoria. Existen diferentes tipos de E/S, como la E/S Programada, la E/S con interrupciones y la E/S con acceso directo a memoria (DMA).
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>E/S Programada:</strong> La CPU espera a que el dispositivo esté listo para enviar datos. Sencillo pero ineficiente.</li>
+        <li><strong>E/S con Interrupciones:</strong> El dispositivo interrumpe a la CPU cuando hay datos disponibles, optimizando el uso del tiempo de procesamiento.</li>
+        <li><strong>E/S con Acceso Directo a Memoria (DMA):</strong> Permite transferir grandes cantidades de datos sin involucrar directamente a la CPU, mejorando la eficiencia.</li>
+    </ul>
+
+    <h2 style="color: #00eeff;font-family: tr ; margin-top: 40px;">3.2.2 - Almacenamiento</h2>
+    <p style="font-size: 1.1em;">
+        El almacenamiento guarda datos permanentemente, incluso sin energía. Incluye discos duros (HDD), unidades de estado sólido (SSD), discos compactos y DVDs regrabables. Es más lento que la RAM, pero tiene mayor capacidad.
+    </p>
+    <h3 style="color:#00eeff;font-size: 30px;;font-family: tr ;">Tipos de almacenamiento</h3>
+    <table style="margin: 0 auto 24px auto; border-collapse: collapse; width: 100%; background: #243a8f; color: #fff;">
+        <tr style="background: #1a237e;">
+            <th>Almacenamiento magnético</th>
+            <th>Almacenamiento electrónico</th>
+            <th>Almacenamiento óptico</th>
+        </tr>
+        <tr>
+            <td>Utiliza materiales ferromagnéticos, como cintas magnéticas, disquetes, y unidades de disco rígido.</td>
+            <td>Utiliza la memoria flash u otras tecnologías de memoria no volátil, como unidades USB y tarjetas de memoria.</td>
+            <td>Utiliza láseres para leer y escribir datos en discos ópticos, como CD, DVD, y Blu-ray.</td>
+        </tr>
+    </table>
+    <p style="font-size: 1.1em;">
+        La cantidad de almacenamiento que necesitas depende de tus actividades. Un usuario básico puede necesitar 256 GB o 512 GB, mientras que un usuario avanzado o profesional puede necesitar 1 TB o más.
+    </p>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 40px;">FUENTES DE ALIMENTACIÓN</h2>
+            <img src="image/2-3.jpeg" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+
+    <p style="font-size: 1.1em;">
+        Una fuente de alimentación convierte la energía eléctrica de la red en energía utilizable por los componentes electrónicos de una computadora. Sin una fuente de alimentación, ningún componente del sistema podría funcionar.
+    </p>
+    <h3 style="color: #00eeff;font-size: 30px;;font-family: tr ;">FUNCIONES PRINCIPALES</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Conversión de voltaje:</strong> Convierte 120V o 220V CA en voltajes bajos de CD (12V, 5V, 3.3V).</li>
+        <li><strong>Distribución de energía:</strong> Proporciona energía a placa base, disco duro, SSD, GPU, ventiladores.</li>
+        <li><strong>Protección:</strong> Protege contra sobrecargas, cortocircuitos y picos de voltaje.</li>
+    </ul>
+    <p style="font-size: 1.1em;">
+        Este componente es esencial ya que asegura el correcto funcionamiento y la vida útil de los componentes. Una fuente puede causar inestabilidad, fallos o daños.
+    </p>
+    <h3 style="color: #00eeff;font-size: 30px;;font-family: tr ;">TIPOS DE FUENTES DE ALIMENTACIÓN</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>AT (Advanced Technology):</strong> Antiguas, poco eficientes, con conector de encendido físico directo.</li>
+        <li><strong>ATX (Advanced Technology Extended):</strong> Estándar actual, apagado y encendido controlado por el sistema operativo, más eficiente y segura.</li>
+        <li><strong>SFX (Small Form Factor Extended):</strong> Versión compacta del ATX, ideal para gabinetes pequeños, misma funcionalidad que la ATX, más costoso por su diseño compacto.</li>
+    </ul>
+
+    <h2 style="color:#00eeff;font-size: 50px;font-family: tr ; margin-top: 40px;">3.3 AMBIENTES DE SERVICIO</h2>
+    <p style="font-size: 1.1em;">
+        Se refiere al entorno o conjunto de recursos y servicios que permite que los sistemas informáticos y las aplicaciones operen de manera eficiente. Estos ambientes proporcionan los medios necesarios para la ejecución de tareas y aplicaciones, asegurando que todos los componentes del sistema estén interconectados y operando correctamente.
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Sistemas Operativos: Gestionan la memoria, los procesos y los dispositivos de entrada/salida.</li>
+        <li>Redes: Permiten la comunicación entre diferentes computadoras y sistemas.</li>
+        <li>Entorno de Ejecución: Donde las aplicaciones se ejecutan, como máquinas virtuales o contenedores.</li>
+        <li>Bases de Datos: Proveen almacenamiento y acceso a datos para las aplicaciones.</li>
+        <li>Servicios en la Nube: Infraestructura y plataformas que se ofrecen a través de Internet (IaaS, PaaS, SaaS).</li>
+        <li>Seguridad: Mecanismos para proteger datos y garantizar el acceso solo a usuarios autorizados.</li>
+        <li>Ambientes de Desarrollo: Herramientas que los desarrolladores usan para crear y probar aplicaciones.</li>
+    </ul>
+
+    <h2 style="color: #00eeff;font-family: tr ; margin-top: 40px;">3.3.1 - NEGOCIOS</h2>
+    <p style="font-size: 1.1em;">
+        La tecnología ha transformado el trabajo de las organizaciones, incrementando la productividad y eficiencia. Ejemplos: bases de datos en redes, sistemas de reservaciones, sistemas de contabilidad y nóminas, archivos clínicos, sistemas de conmutación electrónica, etc.
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Usos de procesos aritméticos: operaciones básicas como suma, resta, multiplicación y división.</li>
+        <li>Ejecución de funciones lógicas: pasos a seguir ante diferentes situaciones preestablecidas, como el control de pago por horas extra.</li>
+        <li>Operaciones de entrada/salida: información generada por la CPU para almacenamiento y uso posterior, como sistemas de nómina.</li>
+    </ul>
+
+    <h2 style="color: #00eeff;font-family: tr ; margin-top: 40px;">3.3.2 - INDUSTRIA</h2>
+           <img src="image/2-4.jpeg" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+ 
+    <p style="font-size: 1.1em;">
+        Las computadoras industriales son ideales para cadenas logísticas, gestión de almacenes, automatización de fábricas, preparación de pedidos y más. Son robustas y diseñadas para soportar entornos exigentes.
+    </p>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>En la industria automotriz: diseño e ingeniería, control de calidad, gestión de producción y flotas.</li>
+        <li>Una PC industrial es una solución robusta para ambientes extremos, con protección contra líquidos, polvo, temperaturas extremas, golpes y vibraciones.</li>
+        <li>Beneficios: procesos seguros, eficacia en el control de operaciones, ideales para almacenes y flotas comerciales.</li>
+    </ul>
+
+    <h2 style="color:#00eeff;font-family: tr ; margin-top: 40px;">3.3.3 COMERCIO ELECTRÓNICO</h2>
+    <p style="font-size: 1.1em;">
+        El comercio electrónico es un entorno donde se realizan transacciones comerciales a través de internet. Requiere infraestructura tecnológica robusta y sistemas informáticos eficientes, seguros y escalables.
+    </p>
+    <h3 style="color: #00eeff;font-size: 30px;;font-family: tr ;">Características que debe cumplir los equipos</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li>Alto rendimiento</li>
+        <li>Escalabilidad</li>
+        <li>Alta disponibilidad</li>
+        <li>Seguridad</li>
+        <li>Interconectividad</li>
+        <li>Soporte de software</li>
+    </ul>
+    <h3 style="color:#00eeff;font-size: 30px;;font-family: tr ;">Importancia</h3>
+    <ul style="display: inline-block; text-align: left; font-size: 1.1em;">
+        <li><strong>Hardware:</strong> Servidores, centros de datos, dispositivos del cliente.</li>
+        <li><strong>Software:</strong> Sistemas operativos, bases de datos, plataformas web y apps.</li>
+        <li><strong>Redes:</strong> Conectividad estable y rápida para transferencias de datos y pagos en tiempo real.</li>
+    </ul>
+    <p style="font-size: 1.1em;">
+        La arquitectura debe ser eficiente, segura, escalable y siempre disponible. Por eso se usan soluciones modernas como la nube, arquitecturas distribuidas, virtualización y balanceo de carga.
+    </p>
+</div>
+
+<footer style="text-align: end; padding: 20px; color: #f1f1f1; font-family: QUANTUM;">
+
+        2025.
+    </footer>
+
+
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura De Computadoras </title>
+    
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <header>
+   <h1>ARQUITECTURA DE COMPUTADORAS </h1> 
+<nav>
+    <ul>
+        <li><a href="index.html" title="Pagina De Inicio" >Inicio</a></li>
+        <li><a href="temario.html"title="Unidaes Con Los Temas">Temario</a></li>
+        <li><a href="practicas.html" title="Practicas De La Materia">Practicas</a></li>
+        <li><a href="cotizacion.html" title="Costos De Equipos">Cotizacion</a></li>
+</nav>
+            </header>
+            <h1 class="tituloU4" >Procesamiento paralelo</h1>
+            <div class="cuadro-infoU4">
+    <br>
+    <p class="subtituloU4">
+      4.1 Aspectos básicos de la computación paralela.
+    </p><br>
+    <p class="textoU4">
+      Un <strong>computador paralelo</strong> es un sistema compuesto por múltiples elementos de procesamiento independientes
+ que trabajan de manera coordinada para resolver problemas de alto coste computacional. Su ámbito de
+ aplicación abarca desde la conexión de procesadores dentro de un mismo sistema hasta la interconexión de
+ computadores completos. 
+    </p>
+    <br>
+    <h1 class="subtitulo1-U4" > Principios de la Computación Paralela</h1>
+    <br>
+    <p class="textoU4">
+      Se basa en la ejecución simultánea de múltiples instrucciones, dividiendo problemas grandes en
+ subproblemas más pequeños que se resuelven en paralelo. A cotinuación se mencionara los diferentees tipos de paralelismo:
+    </p>
+    <br>
+    <li class="listaU4">
+      <strong> Nivel de bit (ej: aumento del tamaño de palabra del procesador) </strong>
+    </li>
+    <br>
+    <li class="listaU4">
+      <strong> Nivel de instrucción (pipelines, procesadores superescalares).</strong>
+    </li>
+    <br>
+    <li class="listaU4">
+      <strong> De tareas (ejecución concurrente de procesos distintos). </strong>
+    </li>
+    <br>
+    <br>
+    <h1 class="subtitulo1-U4" > Importancia y Evolución</h1>
+    <br>
+    <p class="textoU4">
+      Surgió como respuesta a las limitaciones físicas del aumento
+ de frecuencia en procesadores (problemas de consumo
+ energético y calor). Hoy es el paradigma dominante, especialmente con 
+procesadores multinúcleo.
+    </p>
+    <br>
+    <div class="horizontal-list">
+        <img src="image/U4-1.PNG" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      </div>  
+    <br>
+    <br>
+    <h1 class="subtitulo1-U4" >Clasificación de Computadoras Paralelas</h1>
+ <br>
+    <table class="tablaU4">
+        <tr>
+    <th>Sistemas integrados</th>
+    <th>Sistemas distribuidos</th>
+    <th>Arquitecturas especializadas</th>
+  </tr>
+  <tr>
+    <td>Procesadores multinúcleo y multiprocesador (varios núcleos/CPUs en una misma máquina).</td>
+    <td>Clústeres, MPPs (Massively Parallel Processors) y grids (varias máquinas trabajando en una misma tarea)</td>
+    <td>Se combinan con procesadores tradicionales para acelerar tareas específicas (ej: GPUs para cálculos matriciales).</td>
+  </tr>
+        </table>
+<br>
+
+  </div>
+<div class="cuadro-infoU4">
+    <br>
+    <p class="subtituloU4">
+      4.2 Tipos de computación paralela
+    </p><br>
+    <br>
+    <h1 class="subtitulo1-U4" >1. Paralelismo a Nivel de Bit</h1><br>
+    <p class="textoU4">
+       El <strong>paralelismo a nivel de bit</strong>  fue una de las primeras estrategias para mejorar el rendimiento de los
+ procesadores. Desde los años 70 hasta mediados de los 80, el principal avance consistió en aumentar
+ el tamaño de palabra (word size) del procesador, es decir, la cantidad de bits que podía manejar en una
+ sola operación.
+    </p>
+    <br>
+    <table class="tablaU4">
+        <tr>
+    <th>Evolución histórica</th>
+    <th>Ventaja</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td>Los primeros microprocesadores eran de 4 bits (ej: Intel 4004).
+ Luego evolucionaron a 8 bits (Intel 8080, Zilog Z80), 16 bits (Intel 8086), 32 bits (Intel 80386) y
+ finalmente 64 bits (AMD Athlon 64, Intel Core 2).
+ Hoy en día, los procesadores de 64 bits son el estándar en computación general.</td>
+    <td>Un procesador con un tamaño de palabra mayor puede realizar operaciones más complejas en
+ menos ciclos</td>
+    <td>Sumar dos números de 16 bits en un CPU de 8 bits requiere dos instrucciones (primero
+ los 8 bits bajos, luego los altos con acarreo), mientras que un CPU de 16 bits lo hace en una sola.
+</td>
+  </tr>
+        </table>
+        <br>
+        <br>
+    <h1 class="subtitulo1-U4" >2. Paralelismo a Nivel de Instrucción (ILP)</h1><br>
+    <p class="textoU4">
+       A partir de los años 80, el enfoque cambió hacia la ejecución simultánea de múltiples instrucciones dentro de un mismo
+ procesador. Esto se logró mediante dos técnicas principales:
+    </p>
+    <br>
+    <table class="tablaU4">
+        <tr>
+    <th>Pipeline (Tuberías de Instrucción)</th>
+    <th>Procesadores Superescalares</th>
+  </tr>
+  <tr>
+    <td>Divide la ejecución de una instrucción en etapas secuenciales, permitiendo que varias instrucciones se solapen</td>
+    <td>Pueden ejecutar múltiples instrucciones por ciclo aprovechando unidades de ejecución paralelas.
+      
+    </td>
+  </tr>
+  <tr>
+    <td>En arquitecturas RISC, el pipeline clásico tiene 5 etapas:<br><br>
+    <li class="listaU4-1">
+      <strong> IF (Instruction Fetch):</strong> Obtener la instrucción de memoria.
+    </li>
+    <br>
+    <li class="listaU4-1">
+      <strong> ID (Instruction Decode):</strong> Decodificar la instrucción.
+    </li>
+    <br>
+    <li class="listaU4-1">
+      <strong> EX (Execute):</strong> Realizar la operación:
+    </li>
+    <br>
+    <li class="listaU4-1">
+      <strong> MEM (Memory Access):</strong> Acceder a memoria (si es necesario).
+    </li>
+    <br>
+    <li class="listaU4-1">
+      <strong> WB (Write Back):</strong> Escribir el resultado en un registro.
+    </li>
+  </td>
+    <td>Técnicas clave: <br>
+ <li class="listaU4-1">
+      <strong> Ejecución fuera de orden (Out-of-Order Execution):</strong> Reordena instrucciones para evitar esperas por
+ dependencias.
+    </li>
+    <br>
+    <li class="listaU4-1">
+      <strong> Scoreboarding y Algoritmo de Tomasulo:</strong> Gestionan conflictos de datos mediante renombrado de registros.
+    </li>
+</td>
+  </tr>
+  <tr>
+    <td>Un procesador con un tamaño de palabra mayor puede realizar operaciones más complejas en
+ menos ciclos</td>
+  </tr>
+        </table>
+        <br><br>
+    <h1 class="subtitulo1-U4" >3. Paralelismo de Datos (Data-Level Parallelism - DLP)</h1><br>
+    <p class="textoU4">
+       Se enfoca en procesar grandes conjuntos de datos de manera paralela, típico en aplicaciones
+ científicas y de simulación.
+    </p>
+    <br>
+    <table class="tablaU4">
+        <tr>
+    <th>Aplicaciones</th>
+    <th>Dificultad</th>
+    <th>Soluciones</th>
+  </tr>
+  <tr>
+    <td>Procesamiento de imágenes, simulaciones físicas, machine learning</td>
+    <td> Las dependencias entre iteraciones (ej: un cálculo necesita el resultado de una iteración
+ anterior) limitan la paralelización. 
+    </td>
+    <td><li class="listaU4-1">
+      Uso de instrucciones SIMD (Single Instruction, Multiple Data) como SSE y AVX en CPUs
+ modernas.
+    </li>
+    <br>
+    <li class="listaU4-1">
+      GPUs, que son altamente optimizadas para paralelismo de datos masivo.
+    </td>
+  </tr>
+  
+        </table>
+    <br>
+    <div class="horizontal-list">
+        <img src="image/U4-2.PNG" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      </div> 
+      <br><br>
+    <h1 class="subtitulo1-U4" >4. Paralelismo de Tareas (Task-Level Parallelism - TLP)</h1><br>
+    <p class="textoU4">
+       En lugar de paralelizar operaciones similares (como en DLP), el TLP ejecuta tareas diferentes de manera
+ concurrente.
+     <br>
+     Ejemplos:
+     <li class="listaU4">
+      Un servidor web manejando múltiples peticiones de usuarios al mismo tiempo.
+    </li>
+    </p>
+    <br>
+    <p class="textoU4">
+       <strong>Limitación:</strong> No escala tan fácilmente como el paralelismo de datos, ya que depende de la estructura
+ del programa.
+     <br><br>
+     <strong>Implementaciones:</strong>
+     <li class="listaU4">
+      <strong>Multihilo (Multithreading):</strong> Ejecuta varios hilos en un mismo núcleo (ej: Hyper-Threading de Intel).
+    </li>
+    <br>
+    <li class="listaU4">
+      <strong>Multiprocesamiento:</strong> Usa varios núcleos o CPUs para tareas independientes.
+    </li>
+    </p>
+    <br><br>
+    <p class="subtituloU4">
+      4.2.1 Clasificacion
+    </p><br>
+    <p class="textoU4">
+      La <strong>clasificación de Flynn</strong> es la más utilizada para categorizar sistemas computacionales según el flujo de
+ instrucciones y datos. Sin embargo, debido a los avances tecnológicos, algunas arquitecturas modernas (como los
+ procesadores vectoriales o híbridos) no encajan perfectamente en esta taxonomía. Se han propuesto alternativas,
+ pero ninguna ha tenido tanto impacto como la de Flynn.
+    </p>
+    <br>
+    <div class="horizontal-list">
+        <img src="image/U4-3.PNG" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      </div> 
+      <br><br>
+    <p class="subtituloU4"> 4.2.2 Arquitectura de los computadores secuenciales.</p><br>
+    <p class="textoU4">
+      Flynn clasifica las arquitecturas en cuatro categorías según el flujo de instrucciones y datos:
+    </p>
+    <br>
+    <br>
+    <table class="tablaU4">
+        <tr>
+          <th></th>
+    <th>SISD (Single Instruction, Single Data)</th>
+    <th>MISD (Multiple Instruction, Single Data)</th>
+    <th>SIMD (Single Instruction, Multiple Data)</th>
+    <th> MIMD (Multiple Instruction, Multiple Data)</th>
+  </tr>
+  <tr>
+    <td>Definición</td>
+    <td> Un solo flujo de instrucciones actúa sobre un solo flujo de datos.</td>
+    <td>Múltiples instrucciones operan sobre un mismo dato.</td>
+    <td>Una misma instrucción se aplica a múltiples datos en paralelo.</td>
+    <td>Múltiples procesadores ejecutan distintas instrucciones sobre distintos datos</td>
+  </tr>
+  <tr>
+    <td>Ejemplo</td>
+    <td>Arquitectura clásica de Von Neumann (CPU monocore sin paralelismo).</td>
+    <td>Aplicable a procesamiento en pipeline: Como en arrays sistólicos o procesadores vectoriales, donde un
+ dato fluye por múltiples etapas de procesamiento</td>
+    <td>Procesadores vectoriales (ej: Intel SSE, AVX).
+ GPUs en operaciones matriciales</td>
+    <td>Sistemas multinúcleo (ej: CPUs modernas).
+ Clusters y supercomputadoras</td>
+  </tr>
+  <tr>
+    <td>Ventaja</td>
+    <td>Usa un contador de programa para ejecución secuencial. Hoy en día, casi ningún procesador es puramente SISD, ya que incorporan técnicas como pipelines o
+ ejecución superescalar</td>
+    <td> Aplicable a procesamiento en pipeline</td>
+    <td> Ideal para operaciones repetitivas sobre vectores (ej: cálculo de salarios en una empresa).</td>
+    <td>Máxima flexibilidad en computación paralela.</td>
+  </tr>
+        </table>
+<br><br>
+    <p class="subtituloU4"> 4.2.3  Organización del espacio de direcciones de memoria.</p><br>
+    <p class="textoU4">
+      Las memorias de acceso secuencial requieren leer datos en orden hasta llegar al deseado.
+      <br>
+      Se clasifican en:
+    </p>
+    <br>
+    <table class="tablaU4">
+        <tr>
+    <th>Registros de desplazamiento.</th>
+    <th>Dispositivos por acoplamiento de carga</th>
+    <th>Memorias de burbuja</th>
+  </tr>
+        </table>
+<br>
+
+  </div>  
+
+   </header>
+
+   <br>
+   <div class="cuadro-infoU4">
+    <br>
+    <p class="subtituloU4">
+      4.3  Sistemas de memoria compartida
+    </p><br>
+    <br>
+    <p class="textoU4">
+       Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores
+ interconectados que comparten un mismo sistema de memoria.
+ <br><br>
+ Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida. Tienen un único espacio de
+ direcciones para todos los procesadores y los mecanismos de comunicación se basan en el paso de mensajes
+ desde el punto de vista del programador.
+  <br><br>
+ Dado que los multiprocesadores comparten diferentes módulos de memoria, pudiendo acceder a un mismo
+ módulo varios procesadores, a los multiprocesadores también se les llama sistemas de memoria compar
+    </p>
+    <br>
+    <div class="horizontal-list">
+        <img src="image/U4-4.PNG" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      </div> 
+      <br><br>
+      <p class="textoU4">
+       Multiproceso es conocido como el uso de múltiples procesos concurrentes en un sistema en lugar de un único
+ proceso en un instante determinado. Como la multitarea, que permite a múltiples procesos compartir una única
+ CPU, múltiples CPUs pueden ser utilizados para ejecutar múltiples hilos dentro de un único proceso.
+ <br><br>
+ El multiproceso para tareas generales es, a menudo, bastante difícil de conseguir debido a que puede haber varios
+ programas manejando datos internos (conocido como estado o contexto) a la vez.
+  <br><br>
+ Los programas típicamente se escriben asumiendo que sus datos son incorruptibles. Sin embargo, si otra copia del
+ programa se ejecuta en otro procesador, las dos copias pueden interferir entre sí intentando ambas leer o escribir
+ su estado al mismo tiempo.
+ <br><br>
+ Para evitar este problema se usa una variedad de técnicas de programación incluyendo semáforos y otras
+ comprobaciones y bloqueos que permiten a una sola copia del programa cambiar de forma exclusiva ciertos
+ valores.
+    </p>
+        <br>
+        <br>
+    <h1 class="subtitulo1-U4" >4.3.1 Redes De Medio Compartido</h1><br>
+    <p class="textoU4">
+       En el mundo de las comunicaciones, y de las redes de computadores en particular, el medio que se utiliza para
+ comunicarse suele estar compartido.
+ <br><br>
+ En el caso de la televisión o la radio, existen diferentes canales y emisoras que están compartiendo el medio. A fin
+ de que no haya problemas, hay una regulación del espectro radioeléctrico: se tiene cuidado de que cada uno de los
+ canales tenga asignada una frecuencia determinada y que no haya más de un canal usando la misma frecuencia.
+ Este sistema se llama multiplexación por división de frecuencia y no sólo se utiliza en la radio y la televisión.
+ Por ejemplo, los sistemas de línea de abonado digital asimétrica (ADSL) utilizan este sistema para conectar la red
+ de computadores de casa a Internet.
+  <br><br>
+  
+Otro método de compartición del acceso en el medio se basa en la distribución de éste por parte de un dispositivo
+ maestro. Por ejemplo, en la tecnología Bluetooth, los dispositivos próximos forman una red llamada piconet. En
+ cada piconet se elige un dispositivo maestro que va preguntando a los demás dispositivos (que hacen las funciones
+ de esclavo) quién debe utilizar el medio. En el caso de que alguien lo necesite, lo tendrá disponible durante cierto
+ tiempo..
+    </p>
+        <br>
+        <br>
+    <h1 class="subtitulo1-U4" >4.3.2 Redes Conmutadas</h1><br>
+    <p class="textoU4">
+       Cuando se va a enviar datos a largas distancias,  este debe pasar por varios nodos intermedios. Los cuales son los
+ encargados de dirigir los datos para que lleguen a su destino. Por lo cual se hace uso de lo que es una red
+ conmutada. Ya que estas Consisten en un conjunto de nodos interconectados entre sí, a través de medios de
+ transmisión, formando así la mayoría de las veces una topología mallada, donde la información se traslada
+ encaminándola del nodo de origen al nodo destino mediante conmutación entre nodos intermedios.
+ <br></p><br>
+<li class="listaU4">
+      <strong> Establecimiento de la conexión</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Transferencia de la información</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Liberación de la conexión.</strong>
+    </li>
+  <br>
+<p class="textoU4">
+       En pocas palabras se puede decir que una red conmutada es aquella que permite la comunicación de nodo a nodo
+ a través de su conexión, para facilitar el traslado de información.
+ </p><br>
+  </div>
+  <br>
+
+  <div class="cuadro-infoU4">
+    <br>
+    <p class="subtituloU4">
+      4.4 Sistemas de memoria distribuida
+    </p><br>
+    <br>
+    <p class="textoU4">
+       Los <strong> sistemas de memoria distribuida o multicomputadores</strong> pueden ser de dos tipos básicos. El primer de ellos
+ consta de un único computador con múltiples CPUs comunicadas por un bus de datos mientras que en el segundo
+ se utilizan múltiples computadores, cada uno con su propio procesador, enlazados por una red de interconexión
+ más o menos rápida.
+ <br><br>
+ Sobre los sistemas de multicomputadores de memoria distribuida, se simula memorias compartidas. Se usan los
+ mecanismos de comunicación y sincronización de sistemas multiprocesadores.
+ <br><br>
+ Un clúster es un tipo de arquitectura paralela distribuida que consiste de un conjunto de computadores
+ independientes interconectados operando de forma conjunta como único recurso computacional sin embargo,
+ cada computador puede utilizarse de forma independiente o separada.
+  <br><br>
+ El tipo más común de clúster es el cluster Beowulf, que es un clúster implementado con múltiples ordenadores
+ comerciales idénticos conectados a una red de área local TCP/IPEthernet. La tecnología Beowulf fue desarrollada
+ originalmente por Thomas Sterling y Donald Becker. La gran mayoría de los superordenadores TOP500 son
+ clústeres. Se aplica a los conjuntos o conglomerados de computadoras construidos mediante la utilización de
+ hardwares comunes y que se compartan como si fuesen una única computadora.
+    </p>
+    <br>
+    <p class="textoU4">
+        Los clúster son usualmente empleados para mejorar el rendimiento y la disponibilidad por encima de la
+ que es provista por un solo computador típicamente siendo más económico que computadores
+ individuales de rapidez y disponibilidad comparables.De un clúster se espera que presente
+ combinaciones de los siguientes servicios:
+    </p>
+    <br>
+<li class="listaU4">
+      <strong> Alto rendimiento</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Alta disponibilidad</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Balance de carga</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Escalabilidad</strong>
+    </li>
+  <br><br>
+  <p class="textoU4">
+         En esta arquitectura, el computador paralelo es esencialmente una colección de procesadores
+ secuenciales, cada uno con su propia memoria local, que pueden trabajar conjuntamente.
+    </p>
+    <br>
+<li class="listaU4">
+      Cada nodo tiene rápido acceso a su propia memoria y acceso a la memoria de otros nodos
+ mediante una red de comunicaciones, habitualmente una red de comunicaciones de alta velocidad.
+    </li>
+  <br>
+  <li class="listaU4">
+       Los datos son intercambiados entre los nodos como mensajes a través de la red.
+    </li>
+    <br>
+    <li class="listaU4">
+      Una red de ordenadores, especialmente si disponen de una interconexión de alta velocidad, puede
+ ser vista como un multicomputador de memoria distribuida y como tal ser utilizada para resolver
+ problemas mediante computación paralela
+    </li>
+  <br>
+  </div>
+  <br>
+
+    <div class="cuadro-infoU4">
+      <br>
+    <p class="subtituloU4">
+      4.5 Casos de estudio
+    </p><br>
+    <br>
+    <p class="textoU4">
+       Líneas De Investigación Y Desarrollo.
+    </p>
+    <br>
+<li class="listaU4">
+      <strong> Paralelización de algoritmos secuenciales. Diseño y optimización de algoritmos</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Arquitecturas multicore y multithreading en multicore</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Arquitecturas multiprocesador.</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong> Modelos de representación y predicción de performance de algoritmos paralelos.</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Métricas del paralelismo. Speedup, eficiencia, rendimiento, granularidad, superlinealidad</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Balance de carga estático y dinámico. Técnicas de balanceo de carga</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Análisis de los problemas de migración y asignación óptima de procesos y datos a procesadores.
+ Migración dinámica</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Escalabilidad de algoritmos paralelos en arquitecturas multiprocesador distribuidas.</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Implementación de soluciones sobre diferentes modelos de arquitectura homogéneas y
+ heterogéneas (multicores, clusters, multiclusters y grid)</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Ajuste del modelo de software al modelo de hardware, a fin de optimizar el sistema paralelo/strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Evaluación de performance</strong>
+    </li>
+  <br>
+  <li class="listaU4">
+      <strong>Laboratorios remotos para el acceso transparente a recursos de cómputo paralelo.</strong>
+    </li>
+  <br>
+<p class="subtituloU4">
+      4.5 Casos de estudio
+  <p class="textoU4">
+          Grandes empresas y sus implementaciones con procesamiento paralelo:
+    </p>
+    <br>
+<li class="listaU4">
+      NVIDIA
+ PYSICS LAYER:   
+ </li>
+  <br>
+  <li class="listaU4">
+    GPU PhysX
+    </li>
+    <br>
+    <li class="listaU4">
+     CPU PhysX
+    </li>
+<li class="listaU4">
+    Graphics Layer:    
+ </li>
+  <br>
+  <li class="listaU4">
+   GPU –DirectX Windows
+    </li>
+    <br>
+    <li class="listaU4">
+      AMD
+ PYSICS LAYER: 
+    </li>
+  <br>
+  <br>
+  <li class="listaU4">
+      No GPU PhysX
+ CPU Havok
+    </li>
+  <br>
+  <li class="listaU4">
+      Graphics Layer
+    </li>
+  <br>
+  <li class="listaU4">
+    GPU –DirectX Windows 
+    </li>
+  <br>
+  <li class="listaU4">
+    INTEL
+ PYSICS LAYER
+    </li>
+  <br>
+  <li class="listaU4">
+    No GPU PhysX
+    </li>
+  <br>
+  <li class="listaU4">
+    CPU Havok
+    </li>
+  <br>
+
+   <li class="listaU4">
+    Graphics Layer:
+    </li>
+  <br>
+       <li class="listaU4">
+    GPU –Direct X Windows
+    </li>
+  <br>
+       <li class="listaU4">
+   U –DirectX Windows
+    </li>
+  <br>
+  </div>
+  
+    
+
+  
+  </div>
+
+  
+      
+          
+<footer style="text-align: end; padding: 20px; color: #f1f1f1; font-family: QUANTUM;">
+2025.
+            </footer>
+
+</html>
